@@ -39,7 +39,7 @@ runs:
 
         LATEST_FILENAME="${APP_NAME}-${VERSION}.zip"
         LATEST_KEY="s3://${BUCKET_NAME}/${APP_NAME}/latest/${LATEST_FILENAME}"
-        ARCHIVE_DIR="s3://${BUCKET_NAME}/archive/${APP_NAME}/latest"
+        ARCHIVE_DIR="s3://${BUCKET_NAME}/archive/${APP_NAME}
 
         echo "🔍 Checking for existing latest artifact..."
         EXISTING=$(aws s3 ls "s3://${BUCKET_NAME}/${APP_NAME}/latest/" | awk '{print $4}' | head -n 1 || true)
